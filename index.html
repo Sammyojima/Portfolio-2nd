@@ -4,50 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Samuel Ojima Idakwo - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- ====== Navbar ====== -->
+  <!-- Navbar -->
   <header>
     <nav class="navbar">
       <h1 class="logo">Samuel Ojima Idakwo</h1>
-
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
       <div class="nav-buttons">
-        <!-- Theme Toggle -->
         <button id="theme-toggle" class="toggle-btn">🌙</button>
-        <!-- Mobile Menu Toggle -->
         <button id="menu-toggle" class="menu-btn">☰</button>
       </div>
     </nav>
   </header>
 
-  <!-- ====== Hero ====== -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
       <h2>Hello, I’m <span class="highlight">Samuel</span></h2>
       <p>Chemical & Process Engineer • Software Developer</p>
-
       <a href="#projects" class="btn">View Projects</a>
       <a href="resume.docx" download class="btn resume-btn">Download Resume</a>
-
       <div class="hero-photo">
         <img src="sam.jpg" alt="Samuel photo" />
       </div>
     </div>
   </section>
 
-  <!-- ====== About ====== -->
+  <!-- About Section -->
   <section id="about" class="section">
     <h2>About Me</h2>
     <p class="intro-text">
@@ -55,7 +49,7 @@
     </p>
   </section>
 
-  <!-- ====== Skills ====== -->
+  <!-- Skills Section -->
   <section id="skills" class="section">
     <h2>Skills</h2>
     <div class="skills-grid">
@@ -67,44 +61,62 @@
     </div>
   </section>
 
-  <!-- ====== Projects ====== -->
+  <!-- Projects Section -->
   <section id="projects" class="section">
     <h2>Featured Projects</h2>
     <div class="projects-grid">
-      
       <div class="project-card">
         <h3>CarbonTrack</h3>
         <p>Real-time CO₂ emissions intelligence dashboard for hydrogen, ammonia, and gas plants.</p>
         <p class="stack">React • Node.js • MongoDB</p>
         <a href="https://carbon-track-nine.vercel.app/" target="_blank" class="project-btn">Live Site</a>
       </div>
-
       <div class="project-card">
         <h3>NaijaGreen Bottles</h3>
         <p>Recycling awareness website for PET collection initiatives in Nigeria.</p>
         <p class="stack">HTML • CSS • JS</p>
         <a href="https://naijagreen.netlify.app/" target="_blank" class="project-btn">Live Site</a>
       </div>
-
       <div class="project-card">
         <h3>Visionary Agriculture (AI Farming)</h3>
         <p>AI-powered crop recommendation & soil analysis system.</p>
         <p class="stack">AI • Web Tech</p>
         <a href="https://collinsmoseti.github.io/planet2/" target="_blank" class="project-btn">Live Site</a>
       </div>
-
     </div>
   </section>
 
-  <!-- ====== Contact ====== -->
-  <section id="contact" class="section contact">
+  <!-- Contact Section -->
+  <section id="contact" class="section">
     <h2>Contact Me</h2>
-
+    <p class="intro-text">Feel free to reach out through any of the platforms below.</p>
     <div class="contact-icons">
+      <a href="tel:+2348101844711" title="Call">📞 +234 810 184 4711</a>
+      <a href="mailto:sammyojima@gmail.com" title="Email">✉️ sammyojima@gmail.com</a>
+      <a href="https://github.com/Sammyojima" target="_blank" title="GitHub">🐙 GitHub</a>
+      <a href="https://www.linkedin.com/in/samuel-ojima" target="_blank" title="LinkedIn">🔗 LinkedIn</a>
+    </div>
+  </section>
 
-      <a href="https://rb.gy/w3iugn" target="_blank">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.41 8.17h4.18V24H.41V8.17zM8.36 8.17h4v2.15h.06c.56-.95 1.94-1.95 3.99-1.95C22.4 8.37 24 11 24 15.22V24h-4.18v-8c0-1.91-.03-4.37-2.66-4.37-2.66 0-3.07 2.08-3.07 4.23V24H10V8.17h-1.64z"/></svg>
-      </a>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Samuel Ojima Idakwo | Portfolio Website</p>
+  </footer>
 
-      <a href="https://github.com/Sammyojima" target="_blank">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.44 7.86 10.96.58.1.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.
+  <!-- Scripts -->
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+    themeToggle.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      themeToggle.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
